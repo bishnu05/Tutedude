@@ -19,33 +19,37 @@ body {
 }
 .navbar {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo,
 .nav-links,
 .user-name {
-  display: inline-block;
-  vertical-align: middle;
+  /* display: inline-block; */
+  display: flex;
+  /* vertical-align: middle; */
 }
 
 .logo {
-  width: 20%;
+  /* width: 20%; */
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .navbar .nav-links li {
   list-style: none;
 }
 
-.nav-links {
+/* .nav-links {
   width: 55%;
   text-align: center;
-}
+} */
 
 .nav-links li {
-  display: inline-block;
-  margin: 0 1vw;
+  /* display: inline-block; */
+  display: flex;
+  margin: 0 22px;
   color: #555;
   font-size: 15px;
 }
@@ -55,7 +59,7 @@ body {
   font-size: 16px;
 }
 .user-name {
-  width: 24%;
+  /* width: 24%; */
   text-align: right;
   font-size: 14px;
   font-weight: 600;
@@ -71,24 +75,16 @@ body {
 .hero {
   width: 100%;
   margin-top: 40px;
-}
-
-.hero-left,
-.hero-right {
-  display: inline-block;
-  width: 49%;
-  height: 100%;
-  vertical-align: middle;
-  white-space: normal;
-}
-
-.hero-left {
-  padding-top: 50px;
-  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 70px;
+  padding: 0px 50px;
 }
 
 .hero-left h1 {
-  font-size: 49px;
+  font-size: 40px;
   color: #4d5b68;
 }
 
@@ -124,4 +120,61 @@ body {
   height: 60vh;
   object-fit: contain;
   margin-top: 40px;
+}
+
+@media screen and (width <= 991px) {
+  .container {
+    padding: 30px 30px;
+  }
+  .hero-left h1 {
+    font-size: 30px;
+  }
+  .hero-left button {
+    font-size: 16px;
+    width: 80%;
+    height: 5vh;
+  }
+  .hero-left p {
+    font-size: 19px;
+  }
+  .hero-right img {
+    width: 40vw;
+    height: 100%;
+  }
+  .hero {
+    padding: 0px 20px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .container {
+    padding: 30px 30px;
+  }
+  .hero-left small {
+    font-size: 30px;
+  }
+  .hero-left h1 {
+    font-size: 30px;
+  }
+  .hero-left button {
+    font-size: 18px;
+    width: 100%;
+    height: 6vh;
+  }
+  .hero-left p {
+    font-size: 16px;
+  }
+  .hero-right img {
+    width: 100%;
+    height: auto;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hero {
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
 }
