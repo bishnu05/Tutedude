@@ -15,13 +15,13 @@
 .right {
   width: 36%;
   height: 74vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .left {
   background-color: #2697d0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .left img {
@@ -32,9 +32,6 @@
 
 .right {
   background-color: #edf1f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 form {
