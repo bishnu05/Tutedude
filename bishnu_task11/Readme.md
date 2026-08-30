@@ -1,0 +1,1 @@
+JavaScript - Compound Interest Calculation
