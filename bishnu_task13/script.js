@@ -12,3 +12,4 @@ if (num2 % 2 === 0) {
 } else {
   console.log("The Number " + num2 + " is odd");
 }
+
