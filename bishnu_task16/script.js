@@ -224,7 +224,7 @@ searchButton.addEventListener("click", () => {
   displayStudents(filteredStudents);
 });
 
-// Input clear hone par saare cards wapas show honge
+
 searchInput.addEventListener("input", () => {
   let searchValue = searchInput.value.trim();
 
