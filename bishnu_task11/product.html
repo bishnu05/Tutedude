@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product | Thala 7</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="index.html"><span>Thala</span> <b>7.</b></a>
+        <nav>
+          <a href="index.html">Home</a
+          ><a class="active" href="product.html">Shoes</a
+          ><a href="cart.html">Cart</a><a href="payment.html">Checkout</a>
+        </nav>
+        <div class="nav-actions">
+          <label class="search"
+            ><span>⌕</span><input type="search" placeholder="Search"
+          /></label>
+          <a class="icon-btn" href="cart.html">🛍</a
+          ><a class="avatar" href="#">B</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container product-page">
+      <div class="breadcrumbs">
+        Home &nbsp;›&nbsp; Shoes &nbsp;›&nbsp; Seven Multi-Color Running Shoes
+      </div>
+
+      <section class="product-main">
+        <div class="product-gallery">
+          <div class="main-product-image">
+            <img
+              id="mainProductImage"
+              src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=90"
+              alt="Seven sneaker"
+            />
+          </div>
+          <div class="thumbs">
+            <button
+              class="thumb active"
+              data-img="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=90"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=250&q=80"
+                alt=""
+              />
+            </button>
+            <button
+              class="thumb"
+              data-img="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=90"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=250&q=80"
+                alt=""
+              />
+            </button>
+            <button
+              class="thumb"
+              data-img="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1000&q=90"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=250&q=80"
+                alt=""
+              />
+            </button>
+            <button
+              class="thumb"
+              data-img="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=1000&q=90"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=250&q=80"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <span class="tag">BEST SELLER</span>
+          <h1>Seven By M.S. Dhoni Women'Hogun Multi-Color Running Shoes</h1>
+          <p class="product-desc">
+            For exceptional fit, feel and smooth transitions. Made with soft
+            materials and a lightweight sole for all-day comfort.
+          </p>
+          <div class="rating">★★★★★ <span>4.5 (2,000+ reviews)</span></div>
+          <div class="product-price">
+            <span>₹1,334</span><del>₹1,520</del><b>Save 12%</b>
+          </div>
+          <p class="tax">Inclusive of all Taxes</p>
+
+          <div class="quantity-box">
+            <span>Quantity</span>
+            <button id="addToCart" class="btn btn-orange btn-wide">
+              🛍 Add To Cart
+            </button>
+            <div class="qty-control">
+              <button id="minus">−</button><strong id="qty">1</strong
+              ><button id="plus">+</button>
+            </div>
+          </div>
+
+          <a class="continue-link" href="cart.html">Go to Shopping Cart →</a>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

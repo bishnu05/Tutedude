@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart | Thala 7</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="index.html"><span>Thala</span> <b>7.</b></a>
+        <nav>
+          <a href="index.html">Home</a><a href="product.html">Shoes</a
+          ><a class="active" href="cart.html">Cart</a
+          ><a href="payment.html">Checkout</a>
+        </nav>
+        <div class="nav-actions">
+          <label class="search"
+            ><span>⌕</span><input type="search" placeholder="Search"
+          /></label>
+          <a class="icon-btn" href="cart.html">🛍</a
+          ><a class="avatar" href="#">B</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container cart-page">
+      <div class="page-title">
+        <p class="eyebrow">YOUR BAG</p>
+        <h1>Shopping Cart</h1>
+      </div>
+
+      <div class="cart-layout">
+        <section class="cart-left">
+          <div class="cart-head">
+            <span>Product</span><span>Quantity</span><span>Price</span
+            ><span></span>
+          </div>
+          <div id="cartItems"></div>
+          <a class="continue-shopping" href="product.html"
+            >← Continue Shopping</a
+          >
+        </section>
+
+        <aside class="summary-card">
+          <h2>Order Summary</h2>
+          <label class="coupon-label">Enter Coupon Code</label>
+          <div class="coupon">
+            <input id="coupon" placeholder="COUPON CODE" /><button
+              id="applyCoupon"
+            >
+              Apply Coupon
+            </button>
+          </div>
+          <div class="summary-row">
+            <span>Sub Total</span><b id="subtotal">₹0</b>
+          </div>
+          <div class="summary-row">
+            <span>Taxes (if applicable)</span><b id="taxes">₹0</b>
+          </div>
+          <div class="summary-row">
+            <span>Discount</span><b id="discount">₹0</b>
+          </div>
+          <div class="summary-total">
+            <span>Total</span><b id="total">₹0</b>
+          </div>
+          <div class="button-div">
+            <button class="btn btn-orange btn-wide" id="payNow">Pay Now</button>
+          </div>
+
+          <div class="payment-icons">
+            <span>🛡️ Secure</span><b>Razorpay</b><span>✓ Verified</span>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
