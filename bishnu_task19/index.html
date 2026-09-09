@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Booking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="#" class="logo">Logo</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+      </nav>
+      <div class="user-area">
+        <span class="username">Username</span>
+        <button id="logoutBtn" class="logout-btn" aria-label="Logout">
+          <img src="logout.png" alt="username" width="10"/>
+        </button>
+      </div>
+    </header>
+
+    <main class="page" id="home">
+      <div class="booking-layout">
+        <section class="left-column">
+          <div class="card added-items-card">
+            <div class="card-title">Added Items</div>
+            <div class="table-head">
+              <span>S.No</span><span>Service Name</span><span>Price</span>
+            </div>
+            <div class="cart-list" id="cartList"></div>
+            <div class="total-row">
+              <strong>Total Amount</strong><strong id="totalAmount">₹ 0</strong>
+            </div>
+          </div>
+
+          <div class="card booking-card">
+            <h2>Book Now</h2>
+            <form id="bookingForm">
+              <label for="fullName">Full Name</label>
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                placeholder="John Doe"
+                required
+              />
+              <div class="form-row">
+                <div>
+                  <label for="email">Email ID</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="me@gmail.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="phone">Phone Number</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="9000000000"
+                    pattern="[0-9]{10}"
+                    required
+                  />
+                </div>
+              </div>
+              <button class="book-btn" id="bookBtn" type="submit">
+                Book Now
+              </button>
+            </form>
+            <p class="booking-error" id="bookingError" style="display: none">
+              ⓘ Add the items to the cart to book
+            </p>
+            <p class="booking-success" id="bookingSuccess"></p>
+          </div>
+        </section>
+
+        <section class="card services-card" id="services">
+          <div class="services-header">
+            <h1>Browse Our Services</h1>
+            <p>
+              Click on the add to cart button to add the services to your<br />cart
+              or press skip
+            </p>
+          </div>
+          <div class="service-area" id="serviceArea"></div>
+          <div class="service-bottom">
+            <p>ⓘ Add the items to the cart and book now</p>
+          </div>
+        </section>
+      </div>
+      <section id="about" class="hidden-section"></section>
+      <section id="contact" class="hidden-section"></section>
+    </main>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
