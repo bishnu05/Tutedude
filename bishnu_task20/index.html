@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Laundry Services</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">Logo</div>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="user-name">
+          <span>Bishnu</span>
+        </div>
+      </nav>
+
+      <section class="hero" id="home">
+        <div class="hero-left">
+          <h1>
+            Revitalize Your <br />
+            Clothes with Expert <br />
+            <small>Laundry Services!</small>
+          </h1>
+
+          <p>
+            From premium dry cleaning to wash and fold, we deliver care and
+            convenience. Schedule a pickup and experience the freshness today!
+          </p>
+
+          <button id="bookServiceBtn">Book a Service today!</button>
+        </div>
+
+        <div class="hero-right">
+          <img src="laundry.png" alt="Laundry Services" />
+        </div>
+      </section>
+    </div>
+
+    <section class="service-overview" id="about">
+      <div class="overview-item">
+        <h2>15+</h2>
+        <p>Laundry Services</p>
+      </div>
+
+      <div class="overview-item">
+        <h2>240+</h2>
+        <p>Happy Customers</p>
+      </div>
+
+      <div class="overview-item">
+        <h2>2+</h2>
+        <p>Years of Experience</p>
+      </div>
+    </section>
+
+    <section class="booking-section" id="services">
+      <div class="booking-container">
+        <!-- LEFT SIDE -->
+        <div class="services-container">
+          <h2>Our Services</h2>
+
+          <p class="services-subtitle">
+            Click On The Add To Cart Button To Add The Services To Your Cart
+          </p>
+
+          <div class="service-list">
+            <!-- Service 1 -->
+            <!-- Dry Cleaning -->
+            <div class="service-item">
+              <div class="service-info">
+                <span class="service-icon">👕</span>
+
+                <span class="service-name"> Dry Cleaning </span>
+
+                <span class="service-price"> ₹200.00 </span>
+              </div>
+
+              <button
+                class="service-btn add-btn"
+                data-id="1"
+                data-name="Dry Cleaning"
+                data-price="200"
+              >
+                Add Item ⊕
+              </button>
+            </div>
+
+            <!-- Wash & Fold -->
+            <div class="service-item">
+              <div class="service-info">
+                <span class="service-icon">🧺</span>
+
+                <span class="service-name"> Wash & Fold </span>
+
+                <span class="service-price"> ₹100.00 </span>
+              </div>
+
+              <button
+                class="service-btn add-btn"
+                data-id="2"
+                data-name="Wash & Fold"
+                data-price="100"
+              >
+                Add Item ⊕
+              </button>
+            </div>
+
+            <!-- Ironing -->
+            <div class="service-item">
+              <div class="service-info">
+                <span class="service-icon">👔</span>
+
+                <span class="service-name"> Ironing </span>
+
+                <span class="service-price"> ₹30.00 </span>
+              </div>
+
+              <button
+                class="service-btn add-btn"
+                data-id="3"
+                data-name="Ironing"
+                data-price="30"
+              >
+                Add Item ⊕
+              </button>
+            </div>
+
+            <!-- Stain Removal -->
+            <div class="service-item">
+              <div class="service-info">
+                <span class="service-icon">🧹</span>
+
+                <span class="service-name"> Stain Removal </span>
+
+                <span class="service-price"> ₹500.00 </span>
+              </div>
+
+              <button
+                class="service-btn add-btn"
+                data-id="4"
+                data-name="Stain Removal"
+                data-price="500"
+              >
+                Add Item ⊕
+              </button>
+            </div>
+
+            <!-- Leather & Suede Cleaning -->
+            <div class="service-item">
+              <div class="service-info">
+                <span class="service-icon">🧥</span>
+
+                <span class="service-name"> Leather & Suede Cleaning </span>
+
+                <span class="service-price"> ₹999.00 </span>
+              </div>
+
+              <button
+                class="service-btn add-btn"
+                data-id="5"
+                data-name="Leather & Suede Cleaning"
+                data-price="999"
+              >
+                Add Item ⊕
+              </button>
+            </div>
+
+            <!-- Wedding Dress Cleaning -->
+            <div class="service-item">
+              <div class="service-info">
+                <span class="service-icon">👗</span>
+
+                <span class="service-name"> Wedding Dress Cleaning </span>
+
+                <span class="service-price"> ₹2800.00 </span>
+              </div>
+
+              <button
+                class="service-btn add-btn"
+                data-id="6"
+                data-name="Wedding Dress Cleaning"
+                data-price="2800"
+              >
+                Add Item ⊕
+              </button>
+            </div>
+          </div>
+
+          <div class="cart-info">ⓘ Add the items to the cart and book now</div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="booking-right">
+          <!-- ADDED ITEMS -->
+          <div class="cart-box">
+            <h3>Added Items</h3>
+
+            <div class="cart-header">
+              <span>S.No</span>
+              <span>Service Name</span>
+              <span>Price</span>
+            </div>
+
+            <div id="cartItems" class="cart-items">
+              <!-- Dynamic items will appear here -->
+            </div>
+
+            <div class="total-box">
+              <strong>Total Amount</strong>
+
+              <strong> ₹<span id="totalAmount">0.00</span> </strong>
+            </div>
+          </div>
+
+          <!-- BOOK NOW -->
+          <div class="book-box">
+            <h3>Book Now</h3>
+
+            <form id="bookingForm">
+              <label for="fullName"> Full Name </label>
+
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="John Doe"
+                required
+              />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email"> Email ID </label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="mail@gmail.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone"> Phone Number </label>
+
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="0000000000"
+                    pattern="[0-9]{10}"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Hidden values for EmailJS -->
+              <input type="hidden" id="emailServices" name="services" />
+
+              <input type="hidden" id="emailTotal" name="total" />
+
+              <button type="submit" id="bookNowBtn" class="book-now-btn">
+                Book now
+              </button>
+
+              <p id="bookingMessage" class="booking-message"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quality-section">
+      <div class="quality-item">
+        <div class="quality-icon">🧺</div>
+
+        <h3>Premium Services</h3>
+
+        <p>
+          Elevate your wardrobe with our meticulous dry cleaning, ensuring
+          garments look and feel as good as new.
+        </p>
+      </div>
+
+      <div class="quality-item">
+        <div class="quality-icon">🎧</div>
+
+        <h3>Quick Support</h3>
+
+        <p>
+          We're committed to providing prompt solutions to ensure your
+          experience is smooth and worry-free.
+        </p>
+      </div>
+
+      <div class="quality-item">
+        <div class="quality-icon">🚚</div>
+
+        <h3>Hassle Free Delivery</h3>
+
+        <p>
+          Enjoy seamless service with our convenient pickup and delivery
+          options, tailored to your schedule.
+        </p>
+      </div>
+
+      <div class="quality-item">
+        <div class="quality-icon">💰</div>
+
+        <h3>Affordable Prices</h3>
+
+        <p>
+          Experience exceptional care without breaking the bank — our affordable
+          prices make laundry day stress-free.
+        </p>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-title">
+        <h2>
+          Subscribe to our
+          <br />
+          newsletter.
+        </h2>
+      </div>
+
+      <form class="newsletter-form" id="newsletterForm">
+        <input
+          type="text"
+          id="newsletterName"
+          placeholder="Full name"
+          required
+        />
+
+        <input type="email" id="newsletterEmail" placeholder="Email" required />
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <footer id="contact">
+      <div class="footer-container">
+        <!-- Logo -->
+        <div class="footer-column">
+          <h2>Logo</h2>
+
+          <h4>About us</h4>
+
+          <p>
+            Lorem Ipsum Dolor Sit Amet
+            <br />
+            Consectetur. Sed At Congue.
+          </p>
+        </div>
+
+        <!-- Important Links -->
+        <div class="footer-column">
+          <h4>Important Links</h4>
+
+          <a href="#about"> About us </a>
+
+          <a href="#contact"> Contact us </a>
+
+          <a href="#"> Privacy Policy </a>
+
+          <a href="#"> Terms of use </a>
+
+          <a href="#"> Refund Policy </a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+
+          <p>mail@site.com</p>
+
+          <p>+91 91234 56780</p>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+
+          <div class="social-icons">
+            <a href="#"> ◎ </a>
+
+            <a href="#"> f </a>
+
+            <a href="#"> 🐦 </a>
+
+            <a href="#"> ▶ </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
