@@ -442,26 +442,37 @@
         </div>
       </section>
 
-      <!-- VALUES / BENTO -->
+      <!-- VALUES / ASYMMETRICAL BENTO GRID -->
       <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
         <p
           class="mb-7 text-xs font-medium uppercase tracking-[0.2em] text-zinc-400"
         >
           Why Greenwood
         </p>
-        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Large introduction card -->
           <article
-            class="min-h-[260px] rounded-2xl bg-slate-50 p-8 transition-colors hover:bg-slate-100"
+            class="group flex min-h-[320px] flex-col justify-between rounded-2xl bg-slate-50 p-8 transition-colors duration-300 hover:bg-slate-100 sm:col-span-2 lg:col-span-2 lg:row-span-2 lg:min-h-[540px]"
           >
-            <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-400">
-              About
-            </p>
-            <h3 class="mt-28 text-2xl font-light leading-tight text-zinc-600">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-400">
+                About Greenwood
+              </p>
+              <p class="mt-5 max-w-md text-sm leading-7 text-zinc-500">
+                A welcoming space to discover stories, explore ideas, and
+                connect with your community.
+              </p>
+            </div>
+            <h3
+              class="max-w-xl text-4xl font-light leading-tight text-zinc-600 transition-colors duration-300 group-hover:text-zinc-950 sm:text-5xl lg:text-6xl"
+            >
               A place for<br />everyone.
             </h3>
           </article>
+
           <article
-            class="min-h-[260px] rounded-2xl bg-emerald-50 p-8 transition-colors hover:bg-emerald-100"
+            class="group flex min-h-[260px] flex-col justify-between rounded-2xl bg-emerald-50 p-8 transition-colors duration-300 hover:bg-emerald-100"
           >
             <p
               class="text-[10px] uppercase tracking-[0.2em] text-emerald-700/50"
@@ -469,50 +480,62 @@
               Community
             </p>
             <h3
-              class="mt-20 text-2xl font-light leading-tight text-emerald-900"
+              class="text-2xl font-light leading-tight text-emerald-900 transition-colors duration-300 group-hover:text-emerald-950"
             >
               Open doors,<br />open minds.
             </h3>
           </article>
+
           <article
-            class="min-h-[260px] rounded-2xl bg-amber-50 p-8 transition-colors hover:bg-amber-100"
+            class="group flex min-h-[260px] flex-col justify-between rounded-2xl bg-amber-50 p-8 transition-colors duration-300 hover:bg-amber-100"
           >
             <p class="text-[10px] uppercase tracking-[0.2em] text-amber-700/50">
               40+ Years
             </p>
-            <h3 class="mt-20 text-2xl font-light leading-tight text-amber-900">
+            <h3
+              class="text-2xl font-light leading-tight text-amber-900 transition-colors duration-300 group-hover:text-amber-950"
+            >
               Trusted by<br />generations.
             </h3>
           </article>
+
           <article
-            class="min-h-[260px] rounded-2xl bg-rose-50 p-8 transition-colors hover:bg-rose-100"
+            class="group flex min-h-[260px] flex-col justify-between rounded-2xl bg-rose-50 p-8 transition-colors duration-300 hover:bg-rose-100"
           >
             <p class="text-[10px] uppercase tracking-[0.2em] text-rose-700/50">
               Events
             </p>
-            <h3 class="mt-20 text-2xl font-light leading-tight text-rose-900">
+            <h3
+              class="text-2xl font-light leading-tight text-rose-900 transition-colors duration-300 group-hover:text-rose-950"
+            >
               Learn beyond<br />books.
             </h3>
           </article>
+
           <article
-            class="min-h-[260px] rounded-2xl bg-violet-50 p-8 transition-colors hover:bg-violet-100"
+            class="group flex min-h-[260px] flex-col justify-between rounded-2xl bg-violet-50 p-8 transition-colors duration-300 hover:bg-violet-100"
           >
             <p
               class="text-[10px] uppercase tracking-[0.2em] text-violet-700/50"
             >
               Digital
             </p>
-            <h3 class="mt-20 text-2xl font-light leading-tight text-violet-900">
+            <h3
+              class="text-2xl font-light leading-tight text-violet-900 transition-colors duration-300 group-hover:text-violet-950"
+            >
               E-books, Wi-Fi,<br />& computers.
             </h3>
           </article>
+
           <article
-            class="min-h-[260px] rounded-2xl bg-zinc-50 p-8 transition-colors hover:bg-zinc-100"
+            class="group flex min-h-[260px] flex-col justify-between rounded-2xl bg-zinc-50 p-8 transition-colors duration-300 hover:bg-zinc-100"
           >
             <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-400">
               Access
             </p>
-            <h3 class="mt-20 text-2xl font-light leading-tight text-zinc-700">
+            <h3
+              class="text-2xl font-light leading-tight text-zinc-700 transition-colors duration-300 group-hover:text-zinc-950"
+            >
               No barriers<br />to knowledge.
             </h3>
           </article>
@@ -567,7 +590,7 @@
             >
           </div>
 
-          <div class="grid gap-3 lg:grid-cols-4">
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <article
               class="flex min-h-[430px] flex-col rounded-2xl bg-emerald-50 p-8"
             >
@@ -723,13 +746,12 @@
               class="rounded-full bg-zinc-950 px-5 py-3 text-xs text-white transition-transform hover:-translate-y-0.5"
               >Get Directions</a
             >
-             <span class="text-xs text-emerald-800/50">(555) 012-3456</span>
+            <span class="text-xs text-emerald-800/50">(555) 012-3456</span>
             <a
               href="mailto:hello@greenwoodlibrary.org"
               class="text-xs text-emerald-800/70 underline underline-offset-4 transition-colors hover:text-emerald-950"
               >hello@greenwoodlibrary.org</a
             >
-           
           </div>
         </div>
       </section>
@@ -757,7 +779,7 @@
           >
         </div>
 
-        <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
           <article class="group">
             <div class="overflow-hidden rounded-xl">
               <img
